@@ -79,14 +79,14 @@ Focusing on the maximum vector size, which is 2^30, running it is practically im
 To prevent memory allocation failures and crashes, the maximum test size was set to 2^28 elements.
 
 ## ii. Screenshot: C version output + correctness check
-
-_![2^20](C 2^20.jpg)_
+<img width="260" height="247" alt="C 2^20" src="https://github.com/user-attachments/assets/b5032949-2fd9-4efa-83cd-b22d44d0b7d3" />
+<img width="262" height="183" alt="C 2^24" src="https://github.com/user-attachments/assets/1116af30-bacc-4a31-9b4f-136e98f15156" />
+<img width="290" height="242" alt="C 2^28" src="https://github.com/user-attachments/assets/ae1ddf85-b1d8-4e48-bda1-3514ce94e2f0" />
 
 ## iii. Screenshot: x86-64 version output + correctness check
-
-_[Insert screenshot here — same console output covers both ii and iii since both
-kernels print to the same window; crop/annotate to highlight each section if
-your instructor wants them visually separated]_
+<img width="271" height="352" alt="Asm 2^20" src="https://github.com/user-attachments/assets/401d97a6-7405-4bdd-8907-d1bdd75da428" />
+<img width="291" height="349" alt="Asm 2^24" src="https://github.com/user-attachments/assets/75069990-3d7b-4a38-a156-c293490e8f84" />
+<img width="285" height="351" alt="Asm 2^28" src="https://github.com/user-attachments/assets/0dc22012-4c2f-46ef-8894-c538d23c8a29" />
 
 ## iv. Video of source code, compilation, and execution of the C and x86-64 program
 

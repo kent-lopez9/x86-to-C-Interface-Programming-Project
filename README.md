@@ -58,9 +58,9 @@ relative to hand-tuned assembly for the same scalar SIMD workload).
 ## i. Comparative Execution Time and Analysis of the Kernels' Performance
 | Vector Size (n) | C Kernel Avg Time (s) | x86-64 Asm Avg Time (s) | Speedup (C / Asm) |
 |---|---|---|---|
-| 2^20 (1,048,576) | 0.002762 | 0.001160 | 2.38x |
-| 2^24 (16,777,216) | 0.043472 | 0.016492 | 2.64x |
-| 2^28 (268,435,456) | 0.697592 | 0.267141 | 2.61x |
+| 2^20 (1,048,576) | 0.003036 | 0.001139 | 2.67x |
+| 2^24 (16,777,216) | 0.043588 | 0.017543 | 2.48x |
+| 2^28 (268,435,456) | 0.718063 | 0.292320 | 2.46x |
 
 > Note: values are based on the video because it can have a minor change in value each time it is executed.
 

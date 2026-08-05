@@ -38,6 +38,11 @@ assembly, and vice versa, following the calling convention) and a
 performance comparison (how much overhead, if any, the C compiler introduces
 relative to hand-tuned assembly for the same scalar SIMD workload).
 
-## How to run the project?
+## How to run this project from GitHub
 
-1. ** 
+1. On the repository page, click the green **`<> Code`** button and choose **Open with Visual Studio**.
+2. This opens Visual Studio 2022 and prompts you to **clone the repository** and make sure to change the destination path to an empty folder on your local machine before confirming the cloning.
+3. Once cloned, Visual Studio will open **`LBYARCH.sln`**. In **Solution Explorer → Source Files**, you'll find `kernel_asm.asm` and `main.c` already in place.
+4. Run the project (`Ctrl+F5`, or the green **Local Windows Debugger** button) — `main.c` 
+
+> Note: NASM must be installed and its path must match what's set in `kernel.asm`'s Custom Build Tool command line (Properties → Custom Build Tool → Command Line). If you cloned this to a machine where NASM isn't at `c:\nasm\nasm.exe`, update that path first or the `.asm` file won't build.

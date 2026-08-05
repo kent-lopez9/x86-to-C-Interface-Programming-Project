@@ -1,1 +1,4 @@
-﻿  LBYARCH.vcxproj -> C:\Users\Kent\source\repos\projj\x64\Debug\LBYARCH.exe
+﻿  Performing Custom Build Tools
+  main.c
+  LINK : C:\Users\Kent\source\repos\1\x64\Debug\LBYARCH.exe not found or not built by the last incremental link; performing full link
+  LBYARCH.vcxproj -> C:\Users\Kent\source\repos\1\x64\Debug\LBYARCH.exe

@@ -24,11 +24,11 @@ vectors `X1, X2, Y1, Y2` (inputs) and `Z` (output), both versions:
   the C version through SSE intrinsics (`_mm_load_ss`, `_mm_sub_ss`,
   `_mm_mul_ss`, `_mm_add_ss`, `_mm_sqrt_ss`, `_mm_store_ss`), the assembly
   version directly (`movss`, `subss`, `mulss`, `addss`, `sqrtss`).
-- Are called from a single C `main()` that initializes the input vectors,
+- Called from a single C `main()` that initializes the input vectors,
   times each kernel version independently, verifies that the assembly
   kernel's output matches the C kernel's output within a small floating-point
   tolerance, and prints the first 10 elements of `Z` for both.
-- Are benchmarked across three vector sizes (2^20, 2^24, 2^28), each averaged
+- Benchmarked across three vector sizes (2^20, 2^24, 2^28), each averaged
   over 30 runs, timing only the kernel call itself (not allocation or vector
   initialization).
 

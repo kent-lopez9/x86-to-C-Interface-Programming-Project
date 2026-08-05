@@ -47,10 +47,11 @@ relative to hand-tuned assembly for the same scalar SIMD workload).
 
 > Note: NASM must be installed and its path must match what's set in `kernel.asm`'s Custom Build Tool command line (Properties → Custom Build Tool → Command Line). If you cloned this to a machine where NASM isn't at `c:\nasm\nasm.exe`, update that path first or the `.asm` file won't build.
 
-## ImportantFiles
+## Important Files
 
 | File | Purpose |
 |---|---|
-| `main.c` | Vector init, C kernel, timing harness, correctness check, output |
-| `kernel.asm` | x86-64 NASM kernel, Windows x64 calling convention |
-| `kernel.asm` | x86-64 NASM kernel, Windows x64 calling convention |
+| `main.c` | C kernel |
+| `kernel.asm` | x86-64 NASM kernel |
+| `LBYARCH.sln` | Solution file of both C and Asm kernels |
+| `LBYARCH.exe` | Execution file of the main.c output under x64/Debug Folder |

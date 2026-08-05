@@ -55,3 +55,12 @@ relative to hand-tuned assembly for the same scalar SIMD workload).
 | `kernel.asm` | x86-64 NASM kernel |
 | `LBYARCH.sln` | Solution file of both C and Asm kernels |
 | `LBYARCH.exe` | Execution file of the main.c output under x64/Debug Folder |
+
+| Vector Size (n) | C Kernel Avg Time (s) | x86-64 Asm Avg Time (s) | Speedup (C / Asm) |
+|---|---|---|---|
+| 2^20 (1,048,576) | 0.002762 | 0.001160 | 2.38x |
+| 2^24 (16,777,216) | 0.043472 | 0.016492 | 2.64x |
+| 2^28 (268,435,456) | 0.697592 | 0.267141 | 2.61x |
+
+**Correctness Validation: PASSED** at all three vector sizes. The first 10 elements
+of `Z` from the C kernel and the assembly kernel match exactly at every size tested.

@@ -80,7 +80,7 @@ To prevent memory allocation failures and crashes, the maximum test size was set
 
 ## ii. Screenshot: C version output + correctness check
 
-_[2^20](C 2^20.jpg)_
+_![2^20](C 2^20.jpg)_
 
 ## iii. Screenshot: x86-64 version output + correctness check
 

@@ -70,8 +70,25 @@ of `Z` from the C kernel and the assembly kernel match exactly at every size tes
 
 **Kernels' Performace Analysis**
 
-The table above displays that x86-64 assembly kernel consistently performs about 2.4x to 2.6x faster than the C kernel across all vector sizes. This gap exists because hand-written assembly uses the CPU's internal storage registers more efficiently. While the C compiler generates extra setup instructions and occasionally moves temporary values back and forth between the system memory and the processor, the assembly code is more efficient to perform calculations directly. This minimal instruction count allows the processor to execute the loop with far fewer delays.
+The table above displays that x86-64 assembly kernel consistently performs about 2.4x to 2.6x faster than the C kernel across all vector sizes. This gap exists because hand-written assembly uses the CPU's internal storage registers more efficiently. While the C compiler generates extra setup instructions and occasionally moves temporary values back and forth
+between the system memory and the processor, the assembly code is more efficient to perform calculations directly. This minimal instruction count allows the processor to execute the loop with far fewer delays.
 
-Additionally, this performance advantage remains steady even when the vector size grows to 2^28 elements. At this scale, the massive dataset exceeds the CPU's built-in cache and relies heavily on system RAM. Because the assembly version maintains its speedup without slowing down to match the C version on larger datasets, it demonstrates that the primary problem is how fast the CPU can process the arithmetic loop itself rather than how fast it can retrieve data from memory. The compact assembly sequence keeps the CPU's computational units highly active and efficient.
+Additionally, this performance advantage remains steady even when the vector size grows to 2^28 elements. At this scale, the massive dataset exceeds the CPU's built-in cache and relies heavily on system RAM. Because the assembly version maintains its speedup without slowing down to match the C version on larger datasets, it demonstrates that the primary problem
+is how fast the CPU can process the arithmetic loop itself rather than how fast it can retrieve data from memory. The compact assembly sequence keeps the CPU's computational units highly active and efficient.
 
-Focusing on the maximum vector size which is 2^30, running it is practically impossible since this machine doesn't support it. The vector size of 2^30 single precision floats requires 4GB of memory because allocating the six required arrays takes over 24GB of RAM. Hence it leads to causing memory allocation failures on standard 16GB personal computers like mine. To prevent memory allocation failures and crashes, the maximum test size was setted ti 2^28 elements.
+Focusing on the maximum vector size which is 2^30, running it is practically impossible since this machine doesn't support it. The vector size of 2^30 single precision floats requires 4GB of memory because allocating the six required arrays takes over 24GB of RAM. Hence it leads to causing memory allocation failures on standard 16GB personal computers like mine.
+To prevent memory allocation failures and crashes, the maximum test size was setted ti 2^28 elements.
+
+## ii. Screenshot: C version output + correctness check
+
+_[Insert screenshot here]_
+
+## iii. Screenshot: x86-64 version output + correctness check
+
+_[Insert screenshot here — same console output covers both ii and iii since both
+kernels print to the same window; crop/annotate to highlight each section if
+your instructor wants them visually separated]_
+
+## iv. Video of source code, compilation, and execution of the C and x86-64 program
+
+_[Link to video showing source code, compilation, and execution of both the C and x86-64 versions]_

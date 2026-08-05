@@ -63,5 +63,7 @@ relative to hand-tuned assembly for the same scalar SIMD workload).
 | 2^24 (16,777,216) | 0.043472 | 0.016492 | 2.64x |
 | 2^28 (268,435,456) | 0.697592 | 0.267141 | 2.61x |
 
+> Note: values are based on the video because it can have a minor change in value each time it is executed.
+
 **Correctness Validation: PASSED** at all three vector sizes. The first 10 elements
 of `Z` from the C kernel and the assembly kernel match exactly at every size tested.

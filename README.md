@@ -4,7 +4,7 @@
 ---
 ## About this project
 
-This project implements the same numerical kernel twice once in C and once
+This project implements the same numerical kernel twice, once in C and once
 in x86-64 assembly language to directly compare their
 performance and confirm that a low-level assembly implementation can call
 and cooperate correctly with a C program under the Windows x64 calling
@@ -20,10 +20,10 @@ Given scalar input `n` (the vector length) and five single-precision float
 vectors `X1, X2, Y1, Y2` (inputs) and `Z` (output), both versions:
 
 - Use **functional scalar SIMD registers** (XMM0/XMM1) and **scalar SIMD
-  floating-point instructions** rather than plain scalar float arithmetic —
-  the C version through SSE intrinsics (`_mm_load_ss`, `_mm_sub_ss`,
-  `_mm_mul_ss`, `_mm_add_ss`, `_mm_sqrt_ss`, `_mm_store_ss`), the assembly
-  version directly (`movss`, `subss`, `mulss`, `addss`, `sqrtss`).
+  floating-point instructions** rather than plain scalar float arithmetic.
+  The C version implements this via SSE intrinsics such as `_mm_load_ss`, `_mm_sub_ss`,
+  `_mm_mul_ss`, `_mm_add_ss`, `_mm_sqrt_ss`, `_mm_store_ss`. Similarly, the assembly
+  version  executes these operations directly using `movss`, `subss`, `mulss`, `addss`, `sqrtss`.
 - Called from a single C `main()` that initializes the input vectors,
   times each kernel version independently, verifies that the assembly
   kernel's output matches the C kernel's output within a small floating-point

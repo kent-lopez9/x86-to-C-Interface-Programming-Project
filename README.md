@@ -90,4 +90,4 @@ your instructor wants them visually separated]_
 
 ## iv. Video of source code, compilation, and execution of the C and x86-64 program
 
-_[Link to video showing source code, compilation, and execution of both the C and x86-64 versions]_
+[https://www.youtube.com/watch?v=OVwtbPjGtDI]

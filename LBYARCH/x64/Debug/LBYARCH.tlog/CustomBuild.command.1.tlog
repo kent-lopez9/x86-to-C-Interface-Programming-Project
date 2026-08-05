@@ -1,0 +1,2 @@
+^C:\USERS\KENT\SOURCE\REPOS\LBYARCH\KERNEL.ASM
+C:\nasm\nasm.exe -f win64 kernel.asm

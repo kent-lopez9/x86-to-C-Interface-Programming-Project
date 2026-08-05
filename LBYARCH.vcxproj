@@ -125,7 +125,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.c" />
-    <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="kernel.asm">

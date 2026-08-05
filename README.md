@@ -68,5 +68,8 @@ relative to hand-tuned assembly for the same scalar SIMD workload).
 **Correctness Validation: PASSED** at all three vector sizes. The first 10 elements
 of `Z` from the C kernel and the assembly kernel match exactly at every size tested.
 
-**Analysis:**
-It can be seen in the table that the x86-64 assembly kernel was consistently **~2.4–2.6x faster** than the C kernel across all three vector sizes, and the ratio stayed roughly flat rather than shrinking as `n` grew.
+**Kernels' Performace Analysis**
+
+The x86-64 assembly kernel consistently performs about 2.4x to 2.6x faster than the C kernel across all vector sizes. This gap exists because hand-written assembly uses the CPU's internal storage registers more efficiently. While the C compiler generates extra setup instructions and occasionally moves temporary values back and forth between the system memory and the processor, the assembly code is streamlined to perform calculations directly. This minimal instruction count allows the processor to execute the loop with far fewer delays.
+
+Additionally, this performance advantage remains steady even when the vector size grows to 2^28 elements. At this scale, the massive dataset exceeds the CPU's built-in cache and relies heavily on system RAM. Because the assembly version maintains its speedup without slowing down to match the C version on larger datasets, it demonstrates that the primary bottleneck is how fast the CPU can process the arithmetic loop itself rather than how fast it can retrieve data from memory. The compact assembly sequence keeps the CPU's computational units highly active and efficient.

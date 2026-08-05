@@ -67,3 +67,6 @@ relative to hand-tuned assembly for the same scalar SIMD workload).
 
 **Correctness Validation: PASSED** at all three vector sizes. The first 10 elements
 of `Z` from the C kernel and the assembly kernel match exactly at every size tested.
+
+**Analysis:**
+It can be seen in the table that the x86-64 assembly kernel was consistently **~2.4–2.6x faster** than the C kernel across all three vector sizes, and the ratio stayed roughly flat rather than shrinking as `n` grew.

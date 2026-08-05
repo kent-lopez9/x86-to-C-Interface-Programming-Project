@@ -37,3 +37,7 @@ The goal is both a functional demonstration (C correctly calling into
 assembly, and vice versa, following the calling convention) and a
 performance comparison (how much overhead, if any, the C compiler introduces
 relative to hand-tuned assembly for the same scalar SIMD workload).
+
+## How to run the project?
+
+1. ** 

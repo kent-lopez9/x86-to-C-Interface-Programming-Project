@@ -56,6 +56,7 @@ relative to hand-tuned assembly for the same scalar SIMD workload).
 | `LBYARCH.sln` | Solution file of both C and Asm kernels |
 | `LBYARCH.exe` | Execution file of the main.c output under x64/Debug Folder |
 
+## i. Comparative Execution Time and Analysis of the Kernels' performance
 | Vector Size (n) | C Kernel Avg Time (s) | x86-64 Asm Avg Time (s) | Speedup (C / Asm) |
 |---|---|---|---|
 | 2^20 (1,048,576) | 0.002762 | 0.001160 | 2.38x |

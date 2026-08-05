@@ -49,7 +49,7 @@ relative to hand-tuned assembly for the same scalar SIMD workload).
 
 ## Important Files
 
-| File | Purpose |
+| File | Short Description |
 |---|---|
 | `main.c` | C kernel |
 | `kernel.asm` | x86-64 NASM kernel |

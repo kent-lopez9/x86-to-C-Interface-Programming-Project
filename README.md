@@ -4,17 +4,16 @@
 ---
 ## About this project
 
-This project implements the same numerical kernel twice — once in C and once
-in hand-written x86-64 assembly — to directly compare their
+This project implements the same numerical kernel twice once in C and once
+in x86-64 assembly language to directly compare their
 performance and confirm that a low-level assembly implementation can call
-and interoperate correctly with a C program under the Windows x64 calling
+and cooperate correctly with a C program under the Windows x64 calling
 convention.
 
-The kernel computes the Euclidean distance between corresponding points from
-two 2D coordinate vectors:
+The kernel calculates the distances between the coordinate points across two vectors:
 
 ```
-Z[i] = sqrt( (X2[i] - X1[i])^2 + (Y2[i] - Y1[i])^2 )
+Z[i] = sqrt((X2[i] - X1[i])^2 + (Y2[i] - Y1[i])^2)
 ```
 
 Given scalar input `n` (the vector length) and five single-precision float
